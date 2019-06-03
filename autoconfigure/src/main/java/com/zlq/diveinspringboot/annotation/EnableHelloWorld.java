@@ -1,6 +1,5 @@
 package com.zlq.diveinspringboot.annotation;
 
-import com.zlq.diveinspringboot.configuration.HelloWorldConfiguration;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.*;

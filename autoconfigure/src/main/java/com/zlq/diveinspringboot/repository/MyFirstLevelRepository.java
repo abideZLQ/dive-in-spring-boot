@@ -1,6 +1,5 @@
 package com.zlq.diveinspringboot.repository;
 
-import com.zlq.diveinspringboot.annotation.FirstLevelRepository;
 import com.zlq.diveinspringboot.annotation.SecondLevelRepository;
 
 //@FirstLevelRepository(value = "myFirstLevelRepository")

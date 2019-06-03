@@ -6,8 +6,6 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
-import javax.swing.*;
-
 @ComponentScan(basePackages = "com.zlq.diveinspringboot.repository")
 public class RepositoryBootstrap {
 

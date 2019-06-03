@@ -1,7 +1,6 @@
 package com.zlq.diveinspringboot.bootstrap;
 
 import com.zlq.diveinspringboot.annotation.EnableHelloWorld;
-import com.zlq.diveinspringboot.repository.MyFirstLevelRepository;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;

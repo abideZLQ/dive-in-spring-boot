@@ -3,3 +3,7 @@ org.springframework.context.ApplicationContextInitializer=\
 com.zlq.diveinspringboot.context.AfterHelloWorldApplicationContextInitializer,\
 com.zlq.diveinspringboot.context.HelloWorldApplicationContextInitializer
 
+# Application Listeners
+org.springframework.context.ApplicationListener=\
+com.zlq.diveinspringboot.listener.AfterHelloWorldApplicationListener,\
+com.zlq.diveinspringboot.listener.HelloWorldApplicationListener

@@ -7,3 +7,7 @@ com.zlq.diveinspringboot.context.HelloWorldApplicationContextInitializer
 org.springframework.context.ApplicationListener=\
 com.zlq.diveinspringboot.listener.AfterHelloWorldApplicationListener,\
 com.zlq.diveinspringboot.listener.HelloWorldApplicationListener
+
+# Run Listeners
+org.springframework.boot.SpringApplicationRunListener=\
+com.zlq.diveinspringboot.run.HelloWorldRunListener

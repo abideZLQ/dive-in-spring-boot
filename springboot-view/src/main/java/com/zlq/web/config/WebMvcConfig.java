@@ -28,7 +28,7 @@ import java.io.File;
 public class WebMvcConfig implements WebMvcConfigurer {
 
     @Bean
-    public ViewResolver defaultViewResolver(){
+    public ViewResolver myViewResolver(){
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setViewClass(JstlView.class);
         viewResolver.setPrefix("/WEB-INF/jsp/");
@@ -36,6 +36,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
         // ThymeleafViewResolver Ordered.LOWEST_PRECEDENCE - 5
         viewResolver.setOrder(Ordered.LOWEST_PRECEDENCE - 10);
         // 优先级高于 ThymeleafViewResolver
+        // 配置 ViewResolver 的 Content-Type(媒体类型)
+        viewResolver.setContentType("text/xml;charset=UTF-8");
         return viewResolver;
     }
 

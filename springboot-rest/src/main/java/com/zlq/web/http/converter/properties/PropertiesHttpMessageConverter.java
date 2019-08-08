@@ -23,9 +23,27 @@ import java.util.Properties;
  */
 public class PropertiesHttpMessageConverter extends AbstractGenericHttpMessageConverter<Properties> {
 
+    public PropertiesHttpMessageConverter(){
+        // 设置支持的MediaType
+        super(new MediaType("text","properties"));
+    }
+
     @Override
     protected void writeInternal(Properties properties, @Nullable Type type, HttpOutputMessage outputMessage) throws IOException, HttpMessageNotWritableException {
-
+        // Properties -> String
+        // OutputStream -> Writer
+        HttpHeaders httpHeaders = outputMessage.getHeaders();
+        MediaType mediaType = httpHeaders.getContentType();
+        // 获取字符编码
+        Charset charset = mediaType.getCharset();
+        // 当 charset 不存在时，使用 UTF-8
+        charset = charset == null ? Charset.forName("UTF-8") : charset;
+        // 字节输出流
+        OutputStream outputStream = outputMessage.getBody();
+        // 字符输出流
+        Writer writer = new OutputStreamWriter(outputStream, charset);
+        // Properties 写入到字符输出流
+        properties.store(writer,"From PropertiesHttpMessageConverter");
     }
 
     @Override

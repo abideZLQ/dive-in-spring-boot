@@ -10,7 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 2019/7/22
  */
 @SpringBootApplication(scanBasePackages = {
-        "com.zlq.web.controller"
+        "com.zlq.web.controller",
+        "com.zlq.web.config"
 })
 public class SpringBootRestBootstrap {
 
